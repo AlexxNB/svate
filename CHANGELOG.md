@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 - 2021-03-19
+
+### Documentation
+
+- ✏️ Fix typos [`8f1493cd`](https://github.com/AlexxNB/svate/commit/8f1493cd445672e239132017ba1c985f090c4ce8)
+- Update changelog [`13478eb9`](https://github.com/AlexxNB/svate/commit/13478eb975f27b81cffad94d47f84ed1135104ab)
+
 ## 0.1.0 - 2021-03-19
 
 ### Features
