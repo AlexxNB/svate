@@ -1,0 +1,26 @@
+name: Publish on NPM
+
+on:
+  push:
+    paths:
+      - 'package.json'
+
+jobs:
+  publish-npm:
+    name: Publishing on NPM
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15
+          registry-url: https://registry.npmjs.org/
+      - name: Installing NPM deps
+        run: npm install
+      - name: Build modules
+        run: npm run build
+      - name: Publishing on NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
