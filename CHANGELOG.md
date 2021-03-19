@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2 - 2021-03-20
+
+### Features
+
+- 🏷️ Add types definition [`a7923fdd`](https://github.com/AlexxNB/svate/commit/a7923fddc5d19931fd352fa70693e94fed49d559)
+
+### Documentation
+
+- Update changelog [`7ddd7721`](https://github.com/AlexxNB/svate/commit/7ddd7721dba01471edbd313c4bcad0644bf7504e)
+
 ## 0.1.1 - 2021-03-19
 
 ### Documentation
