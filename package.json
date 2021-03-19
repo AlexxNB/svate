@@ -1,0 +1,39 @@
+{
+  "name": "svate",
+  "description": "Set of state machines for Svelte applications",
+  "version": "0.0.1",
+  "main": "dist/svate.js",
+  "module": "dist/svate.js",
+  "svelte": "dist/svate.js",
+  "cdn": "dist/svate.min.js",
+  "unpkg": "dist/svate.min.js",
+  "scripts": {
+    "build": "node esbuild",
+    "dev": "node esbuild --dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexxNB/svate.git"
+  },
+  "keywords": [
+    "svelte",
+    "state",
+    "machine",
+    "state",
+    "store",
+    "flags"
+  ],
+  "author": "Alexey Schebelev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexxNB/svate/issues"
+  },
+  "homepage": "https://github.com/AlexxNB/svate#readme",
+  "devDependencies": {
+    "derver": "^0.4.13",
+    "esbuild": "^0.9.4",
+    "esbuild-svelte": "^0.4.3",
+    "svelte": "^3.35.0"
+  }
+}

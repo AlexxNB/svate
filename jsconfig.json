@@ -1,0 +1,9 @@
+{
+    "baseURL":".",
+    "compilerOptions": {
+        "paths": {
+            "@svate": ["./dist/svate.js"],
+            "@lib/*": ["./src/lib/*"]
+        }
+    }
+}
