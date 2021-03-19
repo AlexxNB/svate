@@ -6,10 +6,10 @@ Set of state machines for Svelte applications based on internal Svelte's store.
 
 Set includes four types of state machines:
 
-* ['finite'] - finite state machine
-* ['infinite'] - infinite state machine
-* ['flag'] - simple flag
-* ['flagset'] - set of flags
+* `finite` - finite state machine
+* `infinite` - infinite state machine
+* `flag` - simple flag
+* `flagset` - set of flags
 
 ## Finite and infinite state machines
 
@@ -20,7 +20,7 @@ Finite and infinite are very similar. They allows to choose state from the list 
     import {finite} from 'svate';
     const pages = finite(['One','Two','Three']);
     const {isLast} = pages;
-<script>
+</script>
 
 This is page {$pages}.
 
@@ -59,7 +59,7 @@ Simple Svelte store which has a state `true` or `false`;
 ```html
 <script>
     const myflag = flag(0);
-<script>
+</script>
 
 Flag is {$myflag ? 'on' : 'off'}!
 
