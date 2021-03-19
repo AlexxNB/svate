@@ -35,5 +35,8 @@
     "esbuild": "^0.9.4",
     "esbuild-svelte": "^0.4.3",
     "svelte": "^3.35.0"
+  },
+  "peerDependencies": {
+    "svelte": "3.x"
   }
 }
