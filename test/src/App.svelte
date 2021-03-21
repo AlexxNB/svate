@@ -1,19 +1,19 @@
 <script>
-    import Finite from './Finite.svelte';
-    import Infinite from './Infinite.svelte';
+    import Machine from './Machine.svelte';
+    import EndlessMachine from './EndlessMachine.svelte';
     import Flag from './Flag.svelte';
     import Flagset from './Flagset.svelte';
 </script>
 
-<h1>1. Finite machine</h1>
+<h1>1. Machine</h1>
 
-<Finite/>
+<Machine/>
 
 <hr/>
 
-<h1>2. Infinite machine</h1>
+<h1>2. Endless machine</h1>
 
-<Infinite/>
+<EndlessMachine/>
 
 <hr/>
 
