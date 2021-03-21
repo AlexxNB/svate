@@ -1,11 +1,11 @@
 import {writable} from 'svelte/store';
 import {err,indexOrZero} from '@lib/utils'
 
-export function finite(list,initial){
+export function machine(list,initial){
     return createStateMachine(list,initial,true);
 }
 
-export function infinite(list,initial){
+export function endlessMachine(list,initial){
     return createStateMachine(list,initial,false);
 }
 

@@ -11,13 +11,13 @@ Set includes four types of state machines:
 * `flag` - simple flag
 * `flagset` - set of flags
 
-## Finite and infinite state machines
+## State machines
 
-Finite and infinite are very similar. They allows to choose state from the list of ones. Only the difference is that finite machine doesn't allow to move through edges of the list. Calling `myfinite.next()` when current state is last in list will do nothing. But in case of infinite machine state will change to the one from start of the list. 
+You can use one of `machine` or `endlessMachine`, which are very similar. They allows to choose state from the list of ones. Only the difference is that `machine` doesn't allow to move through edges of the list. For example, calling `myMachine.next()` when current state is last in list will do nothing. But in case of `endlessMachine` state will change to the one from start of the list.
 
 ```html
 <script>
-    import {finite} from 'svate';
+    import {machine} from 'svate';
     const pages = finite(['One','Two','Three']);
     const {isLast} = pages;
 </script>
@@ -30,15 +30,11 @@ This is page {$pages}.
 <button on:click={pages.next}>Next</button>
 
 ```
-### finite initializing
+### machine initializing
 
-`finite(list)` – parameter `list` is an array of states. Each element may be any type.
+`machine(list,[initial]) | endlessMachine(list,[initial])` – parameter `list` is an array of states. Each element may be any type. The `initial` is a value from the list which will be used as initial state, default is first element of the list.
 
-### infinite initializing
-
-`infinite(list)` – parameter `list` is an array of states. Each element may be any type.
-
-### finite/infinite API
+### machine API
 
 * `subscribe()` – Svelte store subscription function. Returns current state in its callback.
 * `next()` – switch to the next state
