@@ -6,8 +6,8 @@ Set of state machines for Svelte applications based on internal Svelte's store.
 
 Set includes four types of state machines:
 
-* `finite` - finite state machine
-* `infinite` - infinite state machine
+* `machine` - simple state machine
+* `endlessMachine` - same as `machine` but can move through list's edges
 * `flag` - simple flag
 * `flagset` - set of flags
 
