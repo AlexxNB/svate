@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 - 2021-03-21
+
+### Documentation
+
+- Update changelog [`de78636e`](https://github.com/AlexxNB/svate/commit/de78636e37cfbfe72a38410b94287c66bd0d0f46)
+
 ## 0.1.2 - 2021-03-20
 
 ### Features
