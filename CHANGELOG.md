@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.4 - 2021-03-21
+
+### Documentation
+
+- Fix terms in readme [`f2bbaec8`](https://github.com/AlexxNB/svate/commit/f2bbaec8f6c472e1a4db1e0d30767683fad80165)
+- Update changelog [`b791e897`](https://github.com/AlexxNB/svate/commit/b791e897e9141089fc5b301559cb052a4b8e261b)
+
 ## 0.1.3 - 2021-03-21
 
 ### Documentation
