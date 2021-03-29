@@ -96,9 +96,9 @@ Flag X is {$myflags.x ? 'on' : 'off'}
 Flag Y is {$myflags.y ? 'on' : 'off'}
 Flag Z is {$myflags.z ? 'on' : 'off'}
 
-<button on:click={myflags.flag.x.on}>On flag X</button>
-<button on:click={myflags.flag.z.off}>Off flag Z</button>
-<button on:click={myflags.toggle}>Toggle all flags</button>
+<button on:click={myflags.x.on}>On flag X</button>
+<button on:click={myflags.z.off}>Off flag Z</button>
+<button on:click={myflags.$.toggle}>Toggle all flags</button>
 ```
 
 ### flagset initializing
@@ -108,18 +108,19 @@ Flag Z is {$myflags.z ? 'on' : 'off'}
 ### flagset API
 
 * `subscribe()` – Svelte store subscription function. Returns current state of all flags in its callback.
-* `flag[name]` – methods to manipulate with flag `name`:
+* `[name]` – methods to manipulate with flag `name`:
     - `on()` – set state of the flag to `true` value.
     - `off()` – set state of the flag to `false` value.
     - `toggle()` – toggle state value from `false` to `true` or vise versa.
     - `set(state)` – set state to the provided `state` value.
     - `state` – returns current state of the flag.
-* `on()` – set state of all flags to `true` value.
-* `off()` – set state of all flags to `false` value.
-* `toggle()` – toggle state of all flags.
-* `reset()` – set initial state for each flag.
-* `set(state)` – set state of all flags to the provided `state` value.
-* `lock()` – lock the flagset. Any method will not be able to change the any flag in the set.
-* `unlock()` – unlock a locked flagset.
-* `locked` – returns Svelte's store which will give `true` when flagset is locked or `false` in other case.
-* `list` – returns array of flag's names.
+* `set`|`$` – methods to use with whole flagset:
+    - `on()` – set state of all flags to `true` value.
+    - `off()` – set state of all flags to `false` value.
+    - `toggle()` – toggle state of all flags.
+    - `reset()` – set initial state for each flag.
+    - `set(state)` – set state of all flags to the provided `state` value.
+    - `lock()` – lock the flagset. Any method will not be able to change the any flag in the set.
+    - `unlock()` – unlock a locked flagset.
+    - `locked` – returns Svelte's store which will give `true` when flagset is locked or `false` in other case.
+    - `list` – returns array of flag's names.

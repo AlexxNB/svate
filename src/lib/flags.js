@@ -21,6 +21,7 @@ export function flag(initial){
     }
 }
 
+const PRESERVED = ['subscribe','set','$'];
 export function flagset(initial){
     if(!typeof initial == 'object') throw err('flagset function must get object with names and states');
 
@@ -32,15 +33,12 @@ export function flagset(initial){
 
     let lock = false;
 
-    const {subscribe,set} = writable(state);
+    const stateStore = writable(state);
     const locked = writable(lock);
 
-    const setState = ()=>set(state);
+    const setState = ()=>stateStore.set(state);
 
-    const flags = {
-        subscribe,
-        flag:{},
-        get f(){return flags.flag},
+    const set = {
         on(){!lock && setState(list.forEach(name => state[name]=true))},
         off(){!lock && setState(list.forEach(name => state[name]=false))},
         toggle(){!lock && setState(list.forEach(name => state[name]=!state[name]))},
@@ -52,8 +50,15 @@ export function flagset(initial){
         get list(){return list},
     }
 
+    const flags = {
+        subscribe: stateStore.subscribe,
+        set:set,
+        $:set,
+    }
+
     list.forEach( name =>{
-        flags.flag[name]={
+        if(PRESERVED.includes[name]) throw err(`flag name can't be ${name}, please rename it`);
+        flags[name]={
             on(){!lock && setState(state[name]=true)},
             off(){!lock && setState(state[name]=false)},
             toggle(){!lock && setState(state[name]=!state[name])},
