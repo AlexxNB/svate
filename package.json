@@ -31,10 +31,10 @@
   },
   "homepage": "https://github.com/AlexxNB/svate#readme",
   "devDependencies": {
-    "derver": "^0.4.13",
-    "esbuild": "^0.9.4",
-    "esbuild-svelte": "^0.4.3",
-    "svelte": "^3.35.0"
+    "derver": "^0.4.19",
+    "esbuild": "^0.13.3",
+    "esbuild-svelte": "^0.5.6",
+    "svelte": "^3.43.0"
   },
   "peerDependencies": {
     "svelte": "3.x"
