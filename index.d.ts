@@ -87,9 +87,9 @@ interface Flagset {
 }
 
 /** Create finite state machine */
-export function finite(states:any[]): StateMachine
+export function machine(states:any[]): StateMachine
 /** Create infinite state machine */
-export function infinite(states:any[]): StateMachine
+export function endlessMachine(states:any[]): StateMachine
 /** Create simple flag */
 export function flag(initial:boolean): Flag
 /** Create set of flags */

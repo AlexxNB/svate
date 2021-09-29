@@ -18,7 +18,7 @@ You can use one of `machine` or `endlessMachine`, which are very similar. They a
 ```html
 <script>
     import {machine} from 'svate';
-    const pages = finite(['One','Two','Three']);
+    const pages = machine(['One','Two','Three']);
     const {isLast} = pages;
 </script>
 
