@@ -1,7 +1,7 @@
 {
   "name": "svate",
   "description": "Set of state machines for Svelte applications",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/svate.js",
   "module": "dist/svate.js",
   "svelte": "dist/svate.js",
